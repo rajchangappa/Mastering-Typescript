@@ -25,3 +25,17 @@ randomValue = 42; // No error, as 'randomValue' can hold any type
 // Unknown: A type that represents a value that could be of any type, but unlike 'any', it requires type checking before performing operations on it. It is safer than 'any' because it forces you to check the type before using the value.
 let unknownValue: unknown = "Hello";
 unknownValue = 42; // No error, but you need to check the type before using it
+
+// Void: A type that represents the absence of a value. It is commonly used as the return type for functions that do not return a value.
+function logMessage(message: string): void {
+  console.log(message);
+}
+
+// Null and Undefined: Types that represent the absence of a value. In TypeScript, you can use 'null' and 'undefined' as types, but they are often used in combination with other types to indicate that a value may be missing.
+let nullableValue: string | null = null;
+let undefinedValue: string | undefined = undefined;
+
+// Never: A type that represents values that never occur. It is typically used for functions that throw exceptions or have infinite loops.
+function throwError(message: string): never {
+  throw new Error(message);
+}
